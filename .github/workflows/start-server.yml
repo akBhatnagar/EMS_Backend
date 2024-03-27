@@ -1,0 +1,36 @@
+name: Start Node.js Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  start-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start server
+        run: node server.js
+
+      # Wait for the server to be ready
+      - name: Wait for server
+        run: |
+          until $(curl --output /dev/null --silent --head --fail http://localhost:3000); do
+            echo "Waiting for server to be ready..."
+            sleep 1
+          done
+
+      - name: Server is ready
+        run: echo "Server is ready, continuing with the workflow"
