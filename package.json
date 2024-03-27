@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/akBhatnagar/EMS_Backend#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "morgan": "^1.10.0",
+    "winston": "^3.13.0",
+    "cors": "^2.8.5"
   }
 }
