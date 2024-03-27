@@ -1,0 +1,23 @@
+{
+  "name": "backend_server",
+  "version": "1.0.0",
+  "description": "Backend server for Expense Management System",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akBhatnagar/EMS_Backend.git"
+  },
+  "author": "Akshay Bhatnagar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akBhatnagar/EMS_Backend/issues"
+  },
+  "homepage": "https://github.com/akBhatnagar/EMS_Backend#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
